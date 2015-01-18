@@ -29,9 +29,9 @@ $(function(){
 
 //smoothScroll
 $(function(){
-	$('a[href^=#]').click(function() {
+	$('a[href^=#top]').click(function() {
 		var href= $(this).attr("href");
-		var target = $(href == "#" || href == "" ? 'html' : href);
+		var target = $(href == "#top" || href == "" ? 'html' : href);
 		var position = target.offset().top;
 		$('body,html').animate({scrollTop:position}, 400, 'swing');
 		return false;
