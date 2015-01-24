@@ -1,3 +1,9 @@
+//ja off
+$(function(){
+    $('.emergency').hide();
+});
+
+
 //current
 $(function(){
 	$('.g-nav li a').each(function(){
@@ -36,6 +42,25 @@ $(function(){
 		$('body,html').animate({scrollTop:position}, 400, 'swing');
 		return false;
 	});
+});
+
+
+//高さ揃え
+//$(function(){
+//    $('.right').height($('.left').height());
+//});
+
+//画像切り替え
+$(function(){
+    $('.image img').each(function(){
+        var imgsrc = $(this).attr('src');
+        $(this).hover(function(){
+            $(this).attr('src', imgsrc.replace(/^(.*)\.([a-zA-Z]+)$/, '$1_o.$2'));
+        },
+        function(){
+            $(this).attr('src', imgsrc);
+        });
+    });
 });
 
 

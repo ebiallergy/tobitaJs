@@ -466,6 +466,12 @@ body {
   line-height: 1.6rem;
 }
 
+.emergency {
+  font-size: 30px;
+  font-size: 3rem;
+  line-height: 6rem;
+}
+
 /*-------------------------------------
 header
 -------------------------------------*/
@@ -572,6 +578,33 @@ lists
 .toggleContent p {
   font-size: 14px;
   font-size: 1.4rem;
+}
+
+/*-------------------------------------
+boxs
+-------------------------------------*/
+.col-2 {
+  margin-left: -10px;
+  *zoom: 1;
+}
+.col-2:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.col {
+  float: left;
+  margin: 0 10px 10px 0;
+  padding: 0px 10px;
+  width: 45%;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+}
+@media only screen and (max-width: 480px) {
+  .col {
+    width: auto;
+  }
 }
 
 /*# sourceMappingURL=master.css.map */
