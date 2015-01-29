@@ -1,6 +1,6 @@
 //ja off
 $(function(){
-    $('.emergency').hide();
+	$('.emergency').hide();
 });
 
 
@@ -33,6 +33,19 @@ $(function(){
     });
 });
 
+//画像切り替え
+$(function(){
+	$('.image img').each(function(){
+		var imgsrc = $(this).attr('src');
+		$(this).hover(function(){
+			$(this).attr('src', imgsrc.replace(/^(.*)\.([a-zA-Z]+)$/, '$1_o.$2'));
+		},
+		function(){
+			$(this).attr('src', imgsrc);
+		});
+	});
+});
+
 //smoothScroll
 $(function(){
 	$('a[href^=#top]').click(function() {
@@ -44,31 +57,32 @@ $(function(){
 	});
 });
 
+//smoothscroll2
+$(function(){
+	$('.box').css({padding : '20px' , backgroundColor : '#ccc' , position : 'relative'});
+	console.log('aaa',$('.box').scroll());
+	
+	$('.obebe').each(function(){
+		$(this).on('click',function(event){
+		event.preventDefault();
+		$('html,body').animate({scrollTop : 0},1000 , 'swing');
+		$('.box').animate({bottom : '2800px'},999, 'linear');
+		});
+	});
+});
+
+//play
+//$(function(){
+//	$('.box').css({padding : '20px' , background : '#ccc', position : 'relative'})
+//	.on('mouseover' , function(){
+//		$(this).animate({
+//			top : '100px'
+//		},300);
+//	});
+//});
 
 //高さ揃え
 //$(function(){
 //    $('.right').height($('.left').height());
 //});
 
-//画像切り替え
-$(function(){
-    $('.image img').each(function(){
-        var imgsrc = $(this).attr('src');
-        $(this).hover(function(){
-            $(this).attr('src', imgsrc.replace(/^(.*)\.([a-zA-Z]+)$/, '$1_o.$2'));
-        },
-        function(){
-            $(this).attr('src', imgsrc);
-        });
-    });
-});
-
-
-//$(function(){
-//	$('a[href^=#]').on('click',function(){
-//		$('html,body').animate({
-//			scrollTop: $($(this).attr('href')).offset().top
-//		}, 3000, 'swing');
-//		return false;
-//	});
-//});
