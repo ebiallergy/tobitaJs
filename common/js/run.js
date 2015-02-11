@@ -66,7 +66,12 @@ $(function(){
 		$(this).on('click',function(event){
 		event.preventDefault();
 		$('html,body').animate({scrollTop : 0},1000 , 'swing');
-		$('.box').animate({bottom : '2800px'},1450, 'linear');
+		$('.box').animate({top : '-2800px'},1450, 'linear');
+			
+		setTimeout(function(){
+			$('.box').css('top', '0')
+		},2000);
+			
 		});
 	});
 });

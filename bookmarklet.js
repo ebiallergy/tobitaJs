@@ -1,0 +1,1 @@
+javascript:(function(){a='http://compressor.ebiene.de/';b='http://ebiallergy.github.io/tobitaJs/';if(document.location.href.indexOf(a)==-1){location.href=document.location.href.replace(b,a);}else{location.href=document.location.href.replace(a,b);}})(location.href);
