@@ -3,7 +3,6 @@ $(function(){
 	$('.emergency').hide();
 });
 
-
 //current
 $(function(){
 	$('.g-nav li a').each(function(){
@@ -75,6 +74,47 @@ $(function(){
 		});
 	});
 });
+
+//changeCss
+$(function(){
+	var body = $('body');
+	$('.changeCss').on('click', function(){
+		if(body.hasClass('ptn1')){
+			body.removeClass('ptn1');
+			body.addClass('default');
+		} else if(body.hasClass('default')){
+			body.removeClass('default');
+			body.addClass('ptn1');
+		} else {
+			body.addClass('ptn1');
+		}
+	});
+});
+
+//		if(b-has('ptn1')){
+//			bRem('ptn1');
+//			bAdd('default')
+//		} else if(b-has('default')){
+//			b-rem('default');
+//		} else if(b-has('default')){
+//			b-add('ptn1');
+//		} else {
+//			b-add('ptn1');
+//		}
+//		if($('body').hasClass('ptn1')){
+//			$('body').removeClass('ptn1');
+//			$('body').addClass('default')
+//		} else if($('body').hasClass('default')){
+//			$('body').addClass('ptn1');
+//		} else {
+//			$('body').addClass('ptn1');
+//		}
+
+//$(function(){
+//	$('.ptn1').css({
+//		background : '#000'
+//	});
+//});
 
 //play
 //$(function(){
