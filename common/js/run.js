@@ -45,6 +45,23 @@ $(function(){
 	});
 });
 
+//tab
+$(function(){
+	$('.tabAnchor li').first().addClass('active');
+	var panelId = $('.tab-01 .active a').attr('href');
+	$('.tabContents > div:not(' + panelId + ')').hide();
+	console.log('href',panelId);
+	$('.tabAnchor li a').on('click',function(event){
+		event.preventDefault();
+		$('.tab-01 li').removeClass('active');
+		$('.tabContents > div').hide();
+		$(this).parent('li').addClass('active');
+		$($(this).attr('href')).show();
+		console.log('obebe',$($(this).attr('href')));
+	});
+});
+
+
 //smoothScroll
 $(function(){
 	$('a[href^=#top]').click(function() {
@@ -58,18 +75,23 @@ $(function(){
 
 //smoothscroll2
 $(function(){
-	$('.box').css({padding : '20px' , backgroundColor : '#ccc' , position : 'relative'});
+	$('.box').css({position : 'relative'});
+	$('.snake').css({position : 'absolute', top : '100px'}).hide();
 	console.log('aaa',$('.box').scroll());
 	
 	$('.obebe').each(function(){
 		$(this).on('click',function(event){
 		event.preventDefault();
-		$('html,body').animate({scrollTop : 0},1000 , 'swing');
-		$('.box').animate({top : '-2800px'},1450, 'linear');
+		$('html,body').animate({scrollTop : 0},1300 , 'swing');
+		$('.box').animate({top : '-3500px'},1650, 'linear');
+		$('.snake').show();
 			
 		setTimeout(function(){
 			$('.box').css('top', '0')
-		},2000);
+		},2500);
+		setTimeout(function(){
+			$('.snake').hide();
+		},2500);
 			
 		});
 	});
