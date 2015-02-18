@@ -83,7 +83,7 @@ $(function(){
 		$(this).on('click',function(event){
 		event.preventDefault();
 		$('html,body').animate({scrollTop : 0},1300 , 'swing');
-		$('.box').animate({top : '-3500px'},1650, 'linear');
+		$('.box').animate({top : '-3500px'},2000, 'linear');
 		$('.snake').show();
 			
 		setTimeout(function(){
