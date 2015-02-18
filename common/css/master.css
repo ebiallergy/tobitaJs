@@ -701,7 +701,7 @@ changeColor
     background: #fff;
   }
   100% {
-    background: #e6ff00;
+    background: #FEFF3D;
   }
 }
 @-moz-keyframes changeColor {
@@ -709,7 +709,7 @@ changeColor
     background: #fff;
   }
   100% {
-    background: #e6ff00;
+    background: #FEFF3D;
   }
 }
 @keyframes changeColor {
@@ -717,7 +717,7 @@ changeColor
     background: #fff;
   }
   100% {
-    background: #e6ff00;
+    background: #FEFF3D;
   }
 }
 .default {
@@ -742,7 +742,7 @@ changeColor
 }
 @-webkit-keyframes changeColor2 {
   0% {
-    background: #e6ff00;
+    background: #FEFF3D;
   }
   100% {
     background: #fff;
@@ -750,7 +750,7 @@ changeColor
 }
 @-moz-keyframes changeColor2 {
   0% {
-    background: #e6ff00;
+    background: #FEFF3D;
   }
   100% {
     background: #fff;
@@ -758,7 +758,7 @@ changeColor
 }
 @keyframes changeColor2 {
   0% {
-    background: #e6ff00;
+    background: #FEFF3D;
   }
   100% {
     background: #fff;
