@@ -638,7 +638,7 @@ boxs
   left: -35px;
   height: 27px;
   width: 27px;
-  background: url(../../../common/images/close.png) no-repeat;
+  background: url(../images/close.png) no-repeat;
   z-index: 101;
 }
 .tobiPop .green {
@@ -658,6 +658,7 @@ boxs
   top: 0;
   left: 30px;
   transform: rotate(10deg);
+  -webkit-transform: rotate(10deg);
   z-index: 109;
 }
 .tobiPop .blue {
@@ -668,6 +669,7 @@ boxs
   top: 0;
   left: 60px;
   transform: rotate(20deg);
+  -webkit-transform: rotate(20deg);
   z-index: 108;
 }
 .tobiPop .popCurent {
