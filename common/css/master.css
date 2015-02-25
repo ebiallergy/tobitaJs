@@ -611,6 +611,69 @@ boxs
   }
 }
 
+.wrap {
+  background: rgba(46, 46, 46, 0.76);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 99;
+}
+
+.tobiPop {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 360px;
+  height: 500px;
+}
+.tobiPop .close {
+  position: absolute;
+  top: -35px;
+  left: -35px;
+  height: 27px;
+  width: 27px;
+  background: url(../../../common/images/close.png) no-repeat;
+  z-index: 101;
+}
+.tobiPop .green {
+  background: #61d661;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 110;
+}
+.tobiPop .red {
+  background: #d66161;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 30px;
+  transform: rotate(10deg);
+  z-index: 109;
+}
+.tobiPop .blue {
+  background: #6173d6;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 60px;
+  transform: rotate(20deg);
+  z-index: 108;
+}
+.tobiPop .popCurent {
+  z-index: 111;
+}
+
 /*-------------------------------------
 bottons
 -------------------------------------*/
