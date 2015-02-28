@@ -19,33 +19,67 @@ $(function(){
 	});
 });
 
-//tobiPop
+//tobiPop click ver
+//$(function(){
+//	var tobiPop = $('.tobiPop > a');
+//	tobiPop.hide();
+//
+//	setTimeout(function(){
+//		tobiPop.fadeIn();
+//		$('.tobiPop').wrap('<div class="wrap">');
+//	},500);
+//	
+//	$('.close').click(function(){
+//		$('.wrap').fadeOut();
+//	});
+//	
+//	tobiPop.click(function(e){
+//	e.preventDefault();
+//		tobiPop.removeClass('popCurent');
+//		$(this).addClass('popCurent');
+//	});
+//});
+
+//tobiPop kai
 $(function(){
-	var pdiv = $('.tobiPop > a');
-	pdiv.hide();
+	var tobiPop = $('.tobiPop > a');
+	tobiPop.hide();
+	tobiPop.eq(1).addClass('box1');
+	tobiPop.eq(2).addClass('box2');
+	tobiPop.eq(3).addClass('box3');
+	tobiPop.eq(4).addClass('box4');
+	tobiPop.eq(5).addClass('box5');
+	tobiPop.eq(6).addClass('box6');
 
 	setTimeout(function(){
-		pdiv.fadeIn();
+		$('.close').parent('a').fadeIn();
+		tobiPop.eq(1).fadeIn();
 		$('.tobiPop').wrap('<div class="wrap">');
 	},500);
 	
-	$('.close').click(function(){
+	setTimeout(function(){
+		$(".tobiPop > a:gt(1)").fadeIn();
+	},600);
+	
+	$(document).on('click touchstart', function(e){
+		if(!$.contains($('.tobiPop')[0], e.target)){
+			$('.wrap').fadeOut();
+		}
+	});
+	
+	
+//	$('.wrap').click(function(){
+//		$(this).fadeOut();
+//	});
+	
+	$('.close , .tobiPop > a:last()').click(function(){
 		$('.wrap').fadeOut();
 	});
 	
-	pdiv.click(function(event){
-		event.preventDefault();
-		pdiv.removeClass('popCurent');
-		$(this).addClass('popCurent');
+	tobiPop.on('click', function(e){
+		e.preventDefault();
+		$(this).fadeOut();
 	});
-	
-//	$('.popCurent').on('click',function(event){
-//		event.preventDefault();
-//
-//		$(this).removeClass('popCurent').fadeOut();
-//		$(this).next('a').addClass('popCurent');
-//		$('.popCurent').fadeIn();
-//	});
 });
 
 //current
@@ -96,8 +130,8 @@ $(function(){
 	var panelId = $('.tab-01 .active a').attr('href');
 	$('.tabContents > div:not(' + panelId + ')').hide();
 	console.log('href',panelId);
-	$('.tabAnchor li a').on('click',function(event){
-		event.preventDefault();
+	$('.tabAnchor li a').on('click',function(e){
+		e.preventDefault();
 		$('.tab-01 li').removeClass('active');
 		$('.tabContents > div').hide();
 		$(this).parent('li').addClass('active');
@@ -132,8 +166,8 @@ $(function(){
 	console.log('nini',$('.box').scroll());
 	
 	$('.obebe').each(function(){
-		$(this).on('click',function(event){
-		event.preventDefault();
+		$(this).on('click',function(e){
+		e.preventDefault();
 		$('html,body').animate({scrollTop : 0},1300 , 'swing');
 		$('.box').animate({top : '-5000px'},2000, 'linear');
 		$('.snake').show();

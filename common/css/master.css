@@ -409,6 +409,19 @@ th {
   clear: both;
 }
 
+.tobiPop .close:before, .tobiPop .close:after {
+  position: absolute;
+  top: 12px;
+  left: 5px;
+  display: block;
+  width: 15px;
+  height: 1px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #ccc;
+  content: "";
+}
+
 /*
 SCSS variables are information about icon's compiled state, stored under its original file name
 
@@ -612,68 +625,64 @@ boxs
 }
 
 .wrap {
-  background: rgba(46, 46, 46, 0.76);
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 99;
   width: 100%;
   height: 100%;
-  z-index: 99;
+  background: rgba(46, 46, 46, 0.76);
 }
 
 .tobiPop {
   position: fixed;
-  z-index: 100;
   top: 0;
-  left: 0;
   right: 0;
   bottom: 0;
+  left: 0;
+  z-index: 100;
   margin: auto;
   width: 360px;
   height: 500px;
 }
 .tobiPop .close {
   position: absolute;
-  top: -35px;
-  left: -35px;
-  height: 27px;
-  width: 27px;
-  background: url(../images/close.png) no-repeat;
+  top: -40px;
+  right: 0;
   z-index: 101;
+  padding: 13px;
+  border: 2px solid #ccc;
+  border-radius: 20px;
 }
-.tobiPop .green {
-  background: #61d661;
-  width: 100%;
-  height: 100%;
+.tobiPop .close:before {
+  transform: rotate(45deg);
+}
+.tobiPop .close:after {
+  transform: rotate(-45deg);
+}
+.tobiPop .popBox {
   position: absolute;
   top: 0;
-  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.tobiPop .box1 {
   z-index: 110;
 }
-.tobiPop .red {
-  background: #d66161;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 30px;
-  transform: rotate(10deg);
-  -webkit-transform: rotate(10deg);
+.tobiPop .box2 {
   z-index: 109;
 }
-.tobiPop .blue {
-  background: #6173d6;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 60px;
-  transform: rotate(20deg);
-  -webkit-transform: rotate(20deg);
+.tobiPop .box3 {
   z-index: 108;
 }
-.tobiPop .popCurent {
-  z-index: 111;
+.tobiPop .box4 {
+  z-index: 107;
+}
+.tobiPop .box5 {
+  z-index: 106;
+}
+.tobiPop .box6 {
+  z-index: 105;
 }
 
 /*-------------------------------------
