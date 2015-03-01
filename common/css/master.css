@@ -421,6 +421,12 @@ th {
   background: #ccc;
   content: "";
 }
+.tobiPop .close:hover:before, .tobiPop .close:hover:after {
+  border-color: #fff;
+}
+.tobiPop .close:focus:before, .tobiPop .close:focus:after {
+  border-color: #fff;
+}
 
 /*
 SCSS variables are information about icon's compiled state, stored under its original file name
@@ -642,8 +648,10 @@ boxs
   left: 0;
   z-index: 100;
   margin: auto;
-  width: 360px;
-  height: 500px;
+  max-width: 360px;
+  max-height: 500px;
+  width: 80%;
+  height: 80%;
 }
 .tobiPop .close {
   position: absolute;
@@ -653,6 +661,12 @@ boxs
   padding: 13px;
   border: 2px solid #ccc;
   border-radius: 20px;
+}
+.tobiPop .close:hover {
+  border-color: #fff;
+}
+.tobiPop .close:focus {
+  border-color: #fff;
 }
 .tobiPop .close:before {
   transform: rotate(45deg);

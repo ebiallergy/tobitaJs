@@ -43,17 +43,16 @@ $(function(){
 //tobiPop kai
 $(function(){
 	var tobiPop = $('.tobiPop > a');
-	tobiPop.hide();
+	tobiPop.hide().children('div').attr('tabindex','1');
 	tobiPop.eq(1).addClass('box1');
 	tobiPop.eq(2).addClass('box2');
 	tobiPop.eq(3).addClass('box3');
 	tobiPop.eq(4).addClass('box4');
 	tobiPop.eq(5).addClass('box5');
 	tobiPop.eq(6).addClass('box6');
-
+	
 	setTimeout(function(){
-		$('.close').parent('a').fadeIn();
-		tobiPop.eq(1).fadeIn();
+		$('.tobiPop > a:lt(2)').fadeIn();
 		$('.tobiPop').wrap('<div class="wrap">');
 	},500);
 	
@@ -67,19 +66,21 @@ $(function(){
 		}
 	});
 	
-	
-//	$('.wrap').click(function(){
-//		$(this).fadeOut();
-//	});
-	
 	$('.close , .tobiPop > a:last()').click(function(){
 		$('.wrap').fadeOut();
+	});
+	
+	$('.close').keypress(function(e){
+		if(e.which === 13){
+			$('.wrap').fadeOut();
+		}
 	});
 	
 	tobiPop.on('click', function(e){
 		e.preventDefault();
 		$(this).fadeOut();
 	});
+	
 });
 
 //current
