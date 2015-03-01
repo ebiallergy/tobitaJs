@@ -543,21 +543,22 @@ lists
 -------------------------------------*/
 .g-nav {
   margin-bottom: 15px;
-  letter-spacing: -6px;
-  border-radius: 6px;
   border: 2px solid #ccc;
+  border-radius: 6px;
+  letter-spacing: -7px;
 }
 .g-nav li {
   display: inline-block;
-  text-align: center;
-  border-right: 1px solid #ccc;
   width: 25%;
+  border-right: 1px solid #ccc;
+  text-align: center;
+  letter-spacing: 0;
 }
 .g-nav li a {
-  color: #000;
   display: block;
-  text-decoration: none;
   padding: 15px 0;
+  color: #000;
+  text-decoration: none;
 }
 .g-nav li a:hover {
   background: #ccc;
@@ -589,9 +590,9 @@ lists
   cursor: pointer;
 }
 .toggleHook .hdg {
+  margin: 0;
   font-size: 18px;
   font-size: 1.8rem;
-  margin: 0;
 }
 
 .toggleContent {
