@@ -423,9 +423,11 @@ th {
 }
 .tobiPop .close:hover:before, .tobiPop .close:hover:after {
   border-color: #fff;
+  background: #fff;
 }
 .tobiPop .close:focus:before, .tobiPop .close:focus:after {
   border-color: #fff;
+  background: #fff;
 }
 
 /*
@@ -646,7 +648,6 @@ boxs
 }
 
 .tobiPop {
-  position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
@@ -654,12 +655,10 @@ boxs
   z-index: 100;
   margin: auto;
   max-width: 360px;
-  max-height: 500px;
   width: 80%;
   height: 80%;
 }
 .tobiPop .close {
-  position: absolute;
   top: -40px;
   right: 0;
   z-index: 101;
@@ -680,7 +679,6 @@ boxs
   transform: rotate(-45deg);
 }
 .tobiPop .popBox {
-  position: absolute;
   top: 0;
   width: 100%;
   height: 100%;

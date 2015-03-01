@@ -51,6 +51,10 @@ $(function(){
 	tobiPop.eq(5).addClass('box5');
 	tobiPop.eq(6).addClass('box6');
 	
+	$('.tobiPop').css('position','fixed');
+	$('.close').css('position','absolute');
+	$('.popBox').css('position','absolute');
+	
 	setTimeout(function(){
 		$('.tobiPop > a:lt(2)').fadeIn();
 		$('.tobiPop').wrap('<div class="wrap">');
