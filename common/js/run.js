@@ -152,6 +152,21 @@ $(function(){
 	console.log('hostname', location.hostname);
 });
 
+//animate
+$(function(){
+	setTimeout('aniBox()');
+	setTimeout('aniBox2()');
+});
+var time = 1400,
+	timeTortal = time*2;
+function aniBox(){
+	$('.aniBox').animate({marginLeft: '300px',paddingRight: '20px'},time).animate({marginLeft: '0',padding: '0'},time);
+	setTimeout('aniBox()',timeTortal);
+}
+function aniBox2(){
+	$('.aniBox2').animate({left: '100px',padding: '0'},100).delay(500).animate({top: '100px'},100).delay(500).animate({left: '0'},100).delay(500).animate({top: '0',padding: '10px'},100);
+	setTimeout('aniBox2()',2400);
+}
 
 //smoothScroll
 $(function(){
@@ -187,44 +202,3 @@ $(function(){
 		});
 	});
 });
-
-//		if(b-has('ptn1')){
-//			bRem('ptn1');
-//			bAdd('default')
-//		} else if(b-has('default')){
-//			b-rem('default');
-//		} else if(b-has('default')){
-//			b-add('ptn1');
-//		} else {
-//			b-add('ptn1');
-//		}
-//		if($('body').hasClass('ptn1')){
-//			$('body').removeClass('ptn1');
-//			$('body').addClass('default')
-//		} else if($('body').hasClass('default')){
-//			$('body').addClass('ptn1');
-//		} else {
-//			$('body').addClass('ptn1');
-//		}
-
-//$(function(){
-//	$('.ptn1').css({
-//		background : '#000'
-//	});
-//});
-
-//play
-//$(function(){
-//	$('.box').css({padding : '20px' , background : '#ccc', position : 'relative'})
-//	.on('mouseover' , function(){
-//		$(this).animate({
-//			top : '100px'
-//		},300);
-//	});
-//});
-
-//高さ揃え
-//$(function(){
-//    $('.right').height($('.left').height());
-//});
-

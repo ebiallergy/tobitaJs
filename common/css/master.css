@@ -430,6 +430,14 @@ th {
   background: #fff;
 }
 
+.aniBox, .aniBox2 {
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  width: 10px;
+  height: 10px;
+  background: #ccc;
+}
+
 /*
 SCSS variables are information about icon's compiled state, stored under its original file name
 
@@ -680,8 +688,6 @@ boxs
 }
 .tobiPop .popBox {
   top: 0;
-  width: 100%;
-  height: 100%;
 }
 .tobiPop .box1 {
   z-index: 110;
@@ -762,6 +768,52 @@ tsbs
   border-right: 2px solid #ccc;
   border-left: 2px solid #ccc;
   padding: 10px 5px;
+}
+
+/*-------------------------------------
+images
+-------------------------------------*/
+.image {
+  text-align: center;
+}
+
+.image-left {
+  margin-bottom: 15px;
+  *zoom: 1;
+}
+.image-left:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.image-left .col-image {
+  float: left;
+}
+.image-left .col-text {
+  overflow: hidden;
+}
+@media only screen and (max-width: 480px) {
+  .image-left .col-image {
+    float: none;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  .image-left .col-text {
+    overflow: visible;
+    text-align: center;
+  }
+}
+
+/*-------------------------------------
+animates
+-------------------------------------*/
+.aniBox {
+  margin-bottom: 20px;
+}
+
+.aniBox2 {
+  position: relative;
+  margin-bottom: 150px;
 }
 
 /*-------------------------------------
