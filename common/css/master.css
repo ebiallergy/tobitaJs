@@ -817,6 +817,37 @@ animates
 }
 
 /*-------------------------------------
+looks
+-------------------------------------*/
+.jsOn .imageSwich {
+  position: relative;
+  width: 100%;
+  height: 1063px;
+  background: url(../images/bg-01.jpg) no-repeat;
+}
+.jsOn .hdg-look {
+  padding-top: 90px;
+  text-align: center;
+}
+.jsOn .look {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  max-width: 485px;
+  max-height: 700px;
+}
+.jsOn .look li {
+  position: absolute;
+  padding: 0 40px;
+}
+.jsOn .look .activeL {
+  z-index: 1;
+}
+
+/*-------------------------------------
 changeColor
 -------------------------------------*/
 .ptn1 {
