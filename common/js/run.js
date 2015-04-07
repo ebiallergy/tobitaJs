@@ -4,6 +4,29 @@ $(function(){
 	$('.jsOn .emergency').hide();
 });
 
+
+//test
+
+var i = 0;
+var array = [1,3,5];
+
+function test(){
+	console.log('test',array[1]);
+}
+test();
+
+function show(){
+	console.log(i++);
+	var time = setTimeout(function(){
+		show();
+	},1000);
+	if(i > 3){
+		clearTimeout(time);
+	}
+}
+show();
+
+
 //changeCss
 $(function(){
 	var body = $('body');
@@ -20,21 +43,6 @@ $(function(){
 	}
 	});
 });
-
-//imageSwitch
-$(function(){
-	
-	$('.look a').on('click touchstart',function(e){
-		e.preventDefault();
-		var L = $('.look>li').length;
-		var r = Math.floor(Math.random()*L);
-		
-		$('.look li').removeClass('activeL');
-		$('.look li').eq(r).addClass('activeL');
-	});
-	
-});
-
 
 //tobiPop click ver
 //$(function(){
@@ -169,20 +177,73 @@ $(function(){
 });
 
 //animate
+aniBox();
 $(function(){
-	setTimeout('aniBox()');
-	setTimeout('aniBox2()');
+	setTimeout(aniBox());
+	setTimeout(aniBox2());
 });
+
 var time = 1400,
 	timeTortal = time*2;
 function aniBox(){
 	$('.aniBox').animate({marginLeft: '300px',paddingRight: '20px'},time).animate({marginLeft: '0',padding: '0'},time);
 	setTimeout('aniBox()',timeTortal);
 }
+
 function aniBox2(){
-	$('.aniBox2').animate({left: '100px',padding: '0'},100).delay(500).animate({top: '100px'},100).delay(500).animate({left: '0'},100).delay(500).animate({top: '0',padding: '10px'},100);
+	$('.aniBox2').animate({left: '100px',padding: '0'},100).delay(500).animate({top: '100px'},100).delay(500).animate({left: '0'},100).delay(500).animate({top: '0',padding: '0 10px'},100);
 	setTimeout('aniBox2()',2400);
 }
+
+
+//imageRandomSwitch
+$(function(){
+	
+	setTimeout(function(){
+		var h = '0';
+		$('.look li').each(function(){
+			if($(this).height() > h){
+				h = $(this).height();
+			}
+		});
+		$('.look').height(h);
+	},20);
+	
+	var Lli = $('.look li');
+	var dl = Lli.length;
+		var dr = Math.floor(Math.random()*dl);
+		var array = [
+			'rotate_-1',
+			'rotate_-2',
+			'rotate_-3',
+			'rotate_-4',
+			'rotate_-5',
+			'rotate_1',
+			'rotate_2',
+			'rotate_3',
+			'rotate_4',
+			'rotate_5'
+		];
+		var dL = array.length;
+		var dR = Math.floor(Math.random()*dL);
+		var dclassValue = array[dR];
+		Lli.eq(dr).addClass('activeL').addClass(dclassValue);
+	
+	$('.look a').on('click touchstart',function(e){
+		e.preventDefault();
+		var l = Lli.length;
+		var r = Math.floor(Math.random()*l);
+		var L = array.length;
+		var R = Math.floor(Math.random()*L);
+		var classValue = array[R];
+		
+		Lli.removeClass(function(index,css){
+			return (css.match (/rotate_-?\d/) || []).join(' ');
+		}).removeClass('activeL');
+		Lli.eq(r).addClass('activeL').addClass(classValue);
+	});
+});
+
 
 //smoothScroll
 $(function(){

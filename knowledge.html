@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1" />
+<title>knowledge | tobitaJs</title>
+<link rel="stylesheet" href="common/css/master.css">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript" src="common/js/run.js"></script>
+<!-- GoogleAnalytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('set' , '&uid' , ('ebiallergy'));
+ga('create', 'UA-59973092-1', 'auto');
+ga('send', 'pageview');
+</script>
+</head>
+<body>
+<div class="contents">
+<header>
+<h1 class="hdg-l1">knowledge | tobitaJs</h1>
+<p class="lead">おもちゃばこのなれっじ</p>
+<button class="changeCss" type="button">!</button>
+</header>
+
+
+<p class="emergency">jsオフにしてんじゃねーよはげ</p>
+
+<section>
+<h2 class="hdg-l2">current</h2>
+<ul class="g-nav">
+<li><a href="index.html">tobitaJs</a></li>
+<li><a href="knowledge.html">knowledge</a></li>
+<li><a href="../tobitaUnity/">tobitaUnity</a></li>
+<li><a href="../tobitaLands/modules/video.html">4</a></li>
+</ul>
+</section>
+
+<section>
+<h2 class="hdg-l2">振り返り</h2>
+<ul class="list-toggle">
+<li>
+<div class="toggleContainer">
+<div class="toggleHook">
+<h3 class="hdg">popについて</h3>
+</div>
+<div class="toggleContent">
+<p>popは、リロードすると画像がモーダルで表示され、領域外とバツボタンをクリックすると非表示になり、領域をクリックすると画像が順に表示され最後の画像をクリックすると非表示になるもの。キーボード操作でも動くようにしている。<br>これは自分で考えて作ってみたものなので恐らく無駄な記述や最適なコードではないと思いますが素人でもjQueryを使えば手軽に好きなように作れるんだなと思わされました。<br>ポイントとしては、領域外をクリックした時に非表示にするための「$.contains」です。この記述は色んなところで使えそうなのでとても勉強になりました。<br><a href="http://s3pw.com/milestoner/2013/06/jquery-tips-for-closing-popup/" target="_blank">$.containsについて</a></p>
+</div>
+</div><!-- /.toggleContainer -->
+</li>
+<li>
+<div class="toggleContainer">
+<div class="toggleHook">
+<h3 class="hdg">currentについて</h3>
+</div>
+<div class="toggleContent">
+<p>cuurentは、その名の通りグロナビや、サイドナビのカレントを自動で判定してclassを付与してくれるもの。<br>本社の設計案件をやった時はjsが全くできなかったので、グロナビのカレントはページごとに直書きでclassを書いており、ナンセンスでしたがようやくjsで実装ができるように…。<br>ポイントとしては、ページのurlを取得する「location.href」。これも色んなところで使えそう。</p>
+</div>
+</div><!-- /.toggleContainer -->
+</li>
+<li>
+<div class="toggleContainer">
+<div class="toggleHook">
+<h3 class="hdg">toggleについて</h3>
+</div>
+<div class="toggleContent">
+<p>toggleは、クリックでコンテンツを表示したり非表示にしたりするもの。特に変わったことはない。<br>ポイントとしては、どれだけクリックを繰り返しても、遅延しない動作。その動作を担っているのが<a href="http://tech.kayac.com/archive/jquery.stop_jumptoend_javascript_advent_calendar_2010_5.html" target="_blank">.stop(true,true)</a></p>
+</div>
+</div><!-- /.toggleContainer -->
+</li>
+<li>
+<div class="toggleContainer">
+<div class="toggleHook">
+<h3 class="hdg">imageRolloverについて</h3>
+</div>
+<div class="toggleContent">
+<p>imageRolloverは、その名の通り画像にマウスオーバーすると別の画像が表示されるもの。<br>世の中に腐るほどプラグイン化されたものが出回っているが、柔軟性を考えると自分で書いた方がよいのかもしれない。<br>ポイントとしては「.replace」これで正規表現で置換ができる。</p>
+</div>
+</div><!-- /.toggleContainer -->
+</li>
+<li>
+<div class="toggleContainer">
+<div class="toggleHook">
+<h3 class="hdg">tabsについて</h3>
+</div>
+<div class="toggleContent">
+<p>tabsは、よくあるタブです。<br>カレント以外のコンテンツは非表示でカレントのものだけ表示される。<br>ポイントとしては、「:not」これで〜以外をセレクトできるので色んな所で活躍してくれる。</p>
+</div>
+</div><!-- /.toggleContainer -->
+</li>
+<li>
+<div class="toggleContainer">
+<div class="toggleHook">
+<h3 class="hdg">addBlankについて</h3>
+</div>
+<div class="toggleContent">
+<p>addBlankは、外部リンクに対してtarget_blankを付与するもの。<br>外部リンクに限らず、href判定で色んなことができるので、拡張子がpdfであればpdfのアイコンが自動でつくようになど色んなことができる。<br>ポイントとしては、「location.hostname」これでドメンを取得できるので、これとマッチするか否かで色んな応用が可能に。</p>
+</div>
+</div><!-- /.toggleContainer -->
+</li>
+<li>
+<div class="toggleContainer">
+<div class="toggleHook">
+<h3 class="hdg">animateについて</h3>
+</div>
+<div class="toggleContent">
+<p>animateは、ただのアニメーションです。<br>jQueryのanimateを使うだけで、cssで操作する感覚でアニメーションを実装できるすぐれもの。<br>ポイントとしては「setTimeout」と「.delay」。setTimeoutでループを実現し、delayでアニメーション挙動開始時間を制御できる。</p>
+</div>
+</div><!-- /.toggleContainer -->
+</li>
+<li>
+<div class="toggleContainer">
+<div class="toggleHook">
+<h3 class="hdg">imageRandomSwitchについて</h3>
+</div>
+<div class="toggleContent">
+<p>imageRandomSwitchは、その名の通り、画像をランダムで切替表示するものです。<br>無限の数の画像の中からランダムで角度と画像を選択して表示します。<br>ポイントとしては、「Math」これでランダムを実現できる。反省としては、これを実装した時は関数がまったく使えなかったので、無駄な記述が多めになってしまっている。関数を使って記述をスマートにできるように改善を。</p>
+</div>
+</div><!-- /.toggleContainer -->
+</li>
+<li>
+<div class="toggleContainer">
+<div class="toggleHook">
+<h3 class="hdg">smoothScrollについて</h3>
+</div>
+<div class="toggleContent">
+<p>smoothScrollは、その名の通りスムーススクロールです。<br>本社案件で使っていた時はプラグインでしか実装したことがなかったので、「動き早くね？」といわれてもどうすることもできませんでしたが、今では自由に変えれるようになりました。2つ目のページtopでは昔からやりたかった追尾するやつです。これもまだjQueryを触り始めた頃に作ったものなので変な書き方をしているので改善の余地ありです。ポイントとしては「scrollTop」これでウィンドウのスクロール位置を取得できます。</p>
+</div>
+</div><!-- /.toggleContainer -->
+</li>
+<li>
+<div class="toggleContainer">
+<div class="toggleHook">
+<h3 class="hdg">見出し横の「！」について</h3>
+</div>
+<div class="toggleContent">
+<p>！はクリックすると、ページ背景色が徐々に切り替わるものです。これはjsはなく、css3のアニメーションをbourbonを用いて手軽に実装しています。css3でもアニメーションは使えるので全部が全部jsで動かなくても使い分けでcssで動かしても面白いのかなと思いました。</p>
+</div>
+</div><!-- /.toggleContainer -->
+</li>
+<li>
+<div class="toggleContainer">
+<div class="toggleHook">
+<h3 class="hdg">今回の課題の総評について</h3>
+</div>
+<div class="toggleContent">
+<p>この課題やって思ったことはもっと早くjsの勉強をすればよかったと思いました。<br>実際にjsの勉強を初めて見るとjsのできる領域がすごく広くてhtmlとcssではどうすることもできなかったところを取得して値を変えれるのでwebの見方が変わりより楽しく思えるようになる反面、勉強しないといけないという危機感が芽生えました。<br>今回はほぼjQueryでの実装ばかりですが、最近javascriptの勉強をするようになってからこの課題で書いたjsがいかに無知でなんとなく書いただけなんだなと改めて思ったので、戒めという意味で修正せずにそのままにしています。jsはweb以外にも色んな所（seleniumやRaspberry Pi）で使えたりするのでますます勉強の価値があると思うので日々精進したいと思います。</p>
+</div>
+</div><!-- /.toggleContainer -->
+</li>
+</ul>
+</section>
+
+<section>
+<p class="obebe"><a href="#">top2</a></p>
+
+<div class="box">
+<div class="snake"><img src="./common/images/bg-footer.png" alt=""></div>
+</div>
+</section>
+
+</div><!-- /.contents -->
+
+</body>
+</html>

@@ -819,32 +819,84 @@ animates
 /*-------------------------------------
 looks
 -------------------------------------*/
+@media only screen and (min-width: 481px) and (max-width: 800px) {
+  .jsOn .imageSwich {
+    padding: 40px 0;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .jsOn .imageSwich {
+    padding: 40px 0;
+  }
+}
 .jsOn .imageSwich {
   position: relative;
+  padding: 90px 0;
   width: 100%;
-  height: 1063px;
-  background: url(../images/bg-01.jpg) no-repeat;
+  height: 100%;
+  background: #262626;
 }
 .jsOn .hdg-look {
-  padding-top: 90px;
+  margin: 0;
+  padding-bottom: 40px;
   text-align: center;
 }
 .jsOn .look {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
+  position: relative;
+  margin: 0 auto;
   max-width: 485px;
-  max-height: 700px;
 }
 .jsOn .look li {
   position: absolute;
   padding: 0 40px;
 }
+.jsOn .look li a {
+  display: block;
+  -webkit-box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.59);
+  box-shadow: 4px 4px 5px 0px rgba(0, 0, 0, 0.59);
+}
 .jsOn .look .activeL {
   z-index: 1;
+}
+.jsOn .look .rotate_1 {
+  -webkit-transform: rotate(1deg);
+  transform: rotate(1deg);
+}
+.jsOn .look .rotate_2 {
+  -webkit-transform: rotate(2deg);
+  transform: rotate(2deg);
+}
+.jsOn .look .rotate_3 {
+  -webkit-transform: rotate(3deg);
+  transform: rotate(3deg);
+}
+.jsOn .look .rotate_4 {
+  -webkit-transform: rotate(4deg);
+  transform: rotate(4deg);
+}
+.jsOn .look .rotate_5 {
+  -webkit-transform: rotate(5deg);
+  transform: rotate(5deg);
+}
+.jsOn .look .rotate_-1 {
+  -webkit-transform: rotate(-1deg);
+  transform: rotate(-1deg);
+}
+.jsOn .look .rotate_-2 {
+  -webkit-transform: rotate(-2deg);
+  transform: rotate(-2deg);
+}
+.jsOn .look .rotate_-3 {
+  -webkit-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+}
+.jsOn .look .rotate_-4 {
+  -webkit-transform: rotate(-4deg);
+  transform: rotate(-4deg);
+}
+.jsOn .look .rotate_-5 {
+  -webkit-transform: rotate(-5deg);
+  transform: rotate(-5deg);
 }
 
 /*-------------------------------------
