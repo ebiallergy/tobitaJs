@@ -1,4 +1,4 @@
-//ja off
+//js on
 $(function(){
 	$('body').addClass('jsOn');
 	$('.jsOn .emergency').hide();
@@ -44,28 +44,7 @@ $(function(){
 	});
 });
 
-//tobiPop click ver
-//$(function(){
-//	var tobiPop = $('.tobiPop > a');
-//	tobiPop.hide();
-//
-//	setTimeout(function(){
-//	tobiPop.fadeIn();
-//	$('.tobiPop').wrap('<div class="wrap">');
-//	},500);
-//
-//	$('.close').click(function(){
-//	$('.wrap').fadeOut();
-//	});
-//
-//	tobiPop.click(function(e){
-//	e.preventDefault();
-//	tobiPop.removeClass('popCurent');
-//	$(this).addClass('popCurent');
-//	});
-//});
-
-//tobiPop kai
+//pop
 $(function(){
 	var tobiPop = $('.tobiPop > a');
 	tobiPop.hide().children('div').attr('tabindex','1');
@@ -198,10 +177,7 @@ function aniBox2(){
 
 //imageRandomSwitch
 $(function(){
-
-	$('body').addClass('jsOn');
-	$('.emergency').hide();
-
+	
 	var allImg = $('.look img'),
 		imgL = allImg.length;
 
